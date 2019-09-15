@@ -2,11 +2,12 @@
 #include "windows.h"
 #include <string>
 #include <fstream>
+#include <iostream>
 
 using namespace std;
 
-//int runs = 2000000000;
-int runs = 100000;
+//int runs = 100000000;
+int runs = 1000000;
 
 const int lillypads_lower = 2;
 const int lillypads_upper = 35;
@@ -111,8 +112,11 @@ void main()
 
   GetFormattedRuns();
 
+  cout << "[" << lillypads_lower << "," << lillypads_upper << "]" << "=>" << formattedRuns << endl;
+
   for (int i = lillypads_lower; i <= lillypads_upper; ++i)
   {
+    cout << "Runnning lillypad count of : " << i << endl;
     averages[i - lillypads_lower] = RunSim(rng, i);
   }
 
