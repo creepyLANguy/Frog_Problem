@@ -126,6 +126,8 @@ void main()
   {
     txt << to_string(i + lillypads_lower) + "," + to_string(averages[i]) + "\n";
   }
+
+  system("pause");
 }
 
 ////////////////////////////////////////////////////////////////////////////////
